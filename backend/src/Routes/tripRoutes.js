@@ -3,14 +3,14 @@ const router = express.Router();
 const Trip = require('../Model/Trip');
 
 // Create Trip (POST)
-// router.post('/create', async (req, res) => {
-//   try {
-//     const trip = await Trip.create(req.body);
-//     res.status(201).json(trip);
-//   } catch (err) {
-//     res.status(400).json({ error: err.message });
-//   }
-// });
+router.post('/create', async (req, res) => {
+  try {
+    const trip = await Trip.create(req.body);
+    res.status(201).json(trip);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
 
 // Get Trips by User (GET)
 router.get('/user/:userId', async (req, res) => {

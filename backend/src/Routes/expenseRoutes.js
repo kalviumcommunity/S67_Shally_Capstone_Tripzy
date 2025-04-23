@@ -3,14 +3,14 @@ const router = express.Router();
 const Expense = require('../Model/Expense');
 
 // // Add Expense (POST)
-// router.post('/add', async (req, res) => {
-//   try {
-//     const expense = await Expense.create(req.body);
-//     res.status(201).json(expense);
-//   } catch (err) {
-//     res.status(400).json({ error: err.message });
-//   }
-// });
+router.post('/add', async (req, res) => {
+  try {
+    const expense = await Expense.create(req.body);
+    res.status(201).json(expense);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
 
 // Get Expenses by Trip (GET)
 router.get('/:tripId', async (req, res) => {
