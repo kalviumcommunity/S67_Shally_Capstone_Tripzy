@@ -23,13 +23,13 @@ router.get('/user/:userId', async (req, res) => {
 });
 
 // Update a Trip (PUT)
-// router.put('/update/:id', async (req, res) => {
-//   try {
-//     const updatedTrip = await Trip.findByIdAndUpdate(req.params.id, req.body, { new: true });
-//     res.status(200).json(updatedTrip);
-//   } catch (err) {
-//     res.status(400).json({ error: err.message });
-//   }
-// });
+router.put('/update/:id', async (req, res) => {
+  try {
+    const updatedTrip = await Trip.findByIdAndUpdate(req.params.id, req.body, { new: true });
+    res.status(200).json(updatedTrip);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
 
 module.exports = router;
