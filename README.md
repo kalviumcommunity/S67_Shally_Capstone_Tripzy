@@ -2,6 +2,9 @@
 
 ## Tripzy — Plan the Ideal Trip Within Your Budget!
 Tripzy is a full-stack travel planning web app that helps users plan unforgettable trips while staying within their budget. Users input their total trip budget, and the app recommends destinations, accommodations, meals, and activities tailored to that budget. It also includes a live expense tracker, a weather-based packing list, smart suggestions, user authentication, and photo uploads.
+ 
+ ## backend deployment - "https://s67-shally-capstone-tripzy.onrender.com"
+ ## frontend deployment- "https://capstonetripzy-30.vercel.app/"
 
  ## backend deployment - "https://s67-shally-capstone-tripzy.onrender.com"
 
