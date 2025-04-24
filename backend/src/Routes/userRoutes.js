@@ -5,21 +5,33 @@ const User = require('../Model/User');
 // Register User
 router.post('/register', async (req, res) => {
   try {
-    const user = await User.create(req.body);
+    const {name, email, password} = req.body
+    const user = await User.create({name, email, password});
     res.status(201).json(user);
   } catch (err) {
-    res.status(400).json({ error: err.message });
+    console.log(err);
+    res.status(400).json({ message: "Internal Server Error", err });
   }
 });
 
-// Get User by ID
-router.get('/:id', async (req, res) => {
+// Get all users
+router.get('/user', async (req, res) => {
   try {
-    const user = await User.findById(req.params.id);
+    const user = await User.find();
     res.status(200).json(user);
   } catch (err) {
     res.status(404).json({ error: 'User not found' });
   }
 });
+
+// Get User by ID
+router.get('/user/:id', async (req, res) => {
+    try {
+      const user = await User.findById(req.params.id);
+      res.status(200).json(user);
+    } catch (err) {
+      res.status(404).json({ error: 'User not found' });
+    }
+  });
 
 module.exports = router;
