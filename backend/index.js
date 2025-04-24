@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const cors = require('cors');
 const connectDB = require('./src/Database/db');
+const uploadRoutes = require('./src/Routes/uploadRoutes');
 
 dotenv.config({
     path: './src/config/.env'
