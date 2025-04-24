@@ -12,6 +12,12 @@ router.post('/add', async (req, res) => {
   }
 });
 
+// Get all expenses
+router.get('/', async (req, res) => {
+    const expenses = await Expense.find();
+    res.json(expenses);
+  });
+  
 // Get Expenses by Trip (GET)
 router.get('/:tripId', async (req, res) => {
   try {

@@ -12,6 +12,12 @@ router.post('/create', async (req, res) => {
   }
 });
 
+// Get all trips
+router.get('/trip', async (req, res) => {
+    const trips = await Trip.find();
+    res.json(trips);
+  });
+
 // Get Trips by User (GET)
 router.get('/user/:userId', async (req, res) => {
   try {
