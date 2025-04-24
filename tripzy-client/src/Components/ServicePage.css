@@ -1,0 +1,28 @@
+/* src/components/ServicesPage.css */
+.services-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #d1d5db;
+  }
+  
+  .services-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1e3a8a;
+    margin-bottom: 20px;
+  }
+  
+  .services-list {
+    font-size: 1.2rem;
+    list-style-type: none;
+    padding: 0;
+    color: black;
+  }
+  
+  .service-item {
+    margin-bottom: 15px;
+  }
+  
