@@ -3,6 +3,7 @@ const dotenv = require('dotenv');
 const cors = require('cors');
 const connectDB = require('./src/Database/db');
 const uploadRoutes = require('./src/Routes/uploadRoutes');
+const authRoutes = require("./src/Routes/authRoutes");
 
 dotenv.config({
     path: './src/config/.env'

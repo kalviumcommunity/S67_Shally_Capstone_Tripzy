@@ -5,7 +5,15 @@ const Trip = require('../Model/Trip');
 // Create Trip (POST)
 router.post('/create', async (req, res) => {
   try {
-    const trip = await Trip.create(req.body);
+    const { destination, totalBudget, user, startDate, endDate } = req.body;
+    if (!destination || !totalBudget || !user || !startDate || !endDate) {
+      return res.status(400).json({ message: 'All fields are required' });                      
+    }
+    const existingTrip = await Trip.findOne({ user, destination, startDate, endDate });
+    if (existingTrip) { 
+      return res.status(400).json({ message: 'Trip already exists' });
+    }
+    const trip = await Trip.create(req.body); 
     res.status(201).json(trip);
   } catch (err) {
     res.status(400).json({ error: err.message });
