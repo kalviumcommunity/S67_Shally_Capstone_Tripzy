@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const upload = require('../middleware/upload');
-const protect = require('../middleware/authMiddleware');
+const upload = require('../Middleware/upload');
+const protect = require('../Middleware/authMiddleware');
 
 
 // Single file upload
