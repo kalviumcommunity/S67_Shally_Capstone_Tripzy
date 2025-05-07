@@ -6,6 +6,8 @@ Tripzy is a full-stack travel planning web app that helps users plan unforgettab
  ## backend deployment - "https://s67-shally-capstone-tripzy.onrender.com"
  ## frontend deployment- "https://capstonetripzy-30.vercel.app/"
 
+backend deployment - "https://s67-shally-capstone-tripzy.onrender.com"
+
 ## 🎯 Project Goal
 The goal of Tripzy is to make travel planning accessible, stress-free, and cost-effective for every type of traveler. By combining personalized recommendations with real-time financial tracking and intelligent budget management, Tripzy empowers users to:
 
